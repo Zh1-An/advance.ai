@@ -1,0 +1,40 @@
+{
+  "_synthetic": true,
+  "_notice": "SYNTHETIC TEST DATA - not a real leak. All records fabricated.",
+  "source_system": "advance.ai",
+  "api_endpoint": "https://api.advance.ai/v2/kyc/verify",
+  "environment": "staging-mirror",
+  "exported_at": "2026-09-28T03:10:00Z",
+  "records": [
+    {
+      "record_id": "SYN-0001",
+      "full_name": "合成测试用户C001",
+      "mobile": "138****0001",
+      "email": "user-c001@example.com",
+      "id_doc_no": "110101********0001",
+      "id_doc_type": "NATIONAL_ID",
+      "face_match_score": 0.97,
+      "verify_result": "PASS"
+    },
+    {
+      "record_id": "SYN-0002",
+      "full_name": "合成测试用户C002",
+      "mobile": "138****0002",
+      "email": "user-c002@example.com",
+      "id_doc_no": "110101********0002",
+      "id_doc_type": "NATIONAL_ID",
+      "face_match_score": 0.41,
+      "verify_result": "REVIEW"
+    },
+    {
+      "record_id": "SYN-0003",
+      "full_name": "合成测试用户C003",
+      "mobile": "139****0003",
+      "email": "user-c003@example.com",
+      "id_doc_no": "440101********0003",
+      "id_doc_type": "PASSPORT",
+      "face_match_score": 0.88,
+      "verify_result": "PASS"
+    }
+  ]
+}
