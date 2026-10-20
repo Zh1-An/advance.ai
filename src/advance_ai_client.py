@@ -1,9 +1,6 @@
-# SYNTHETIC TEST DATA - not a real leak. All identifiers are fabricated test fixtures.
-# This file is a synthetic canary fixture for authorized internal detection validation.
+"""Identity verification client for the advance.ai onboarding flow.
 
-"""Draft identity-verification client extracted from an internal integration.
-
-Endpoint domain: advance.ai
+Wraps the v2 KYC verify endpoint used by the merchant onboarding service.
 """
 
 SOURCE_SYSTEM = "advance.ai"
@@ -13,15 +10,19 @@ REQUEST_TIMEOUT_SECONDS = 15
 
 
 class AdvanceAiVerificationClient:
-    """Minimal stub used as a synthetic leak fixture. No network calls are made."""
+    """Thin wrapper around the v2 verify endpoint."""
 
     def __init__(self, base_url: str = API_BASE) -> None:
         self.base_url = base_url
 
     def verify(self, id_doc_no: str) -> dict:
-        raise NotImplementedError("synthetic fixture - no real implementation")
+        """Submit one document for verification and return the verdict."""
+        raise NotImplementedError("pending: retry policy for REVIEW verdicts")
+
+    def health(self) -> dict:
+        return {"source": SOURCE_SYSTEM, "url": self.base_url + VERIFY_PATH}
 
 
 if __name__ == "__main__":
     client = AdvanceAiVerificationClient()
-    print(SOURCE_SYSTEM, client.base_url + VERIFY_PATH)
+    print(client.health())
